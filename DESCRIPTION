@@ -12,3 +12,5 @@ Imports:
     readr
 Suggests: 
     knitr
+URL: https://github.com/jbened01/geographr
+BugReports: https://github.com/jbened01/geographr/issues
