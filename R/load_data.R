@@ -1,11 +1,12 @@
-#' Load democracy data
+#' Load geopolitical data
 #'
-#' Loads the TidyTuesday democracy dataset from November 5, 2024.
+#' Loads the geopolitical meta dataset used in projects 1 & 2 consisting of economic & health data as well as the original democracy data
 #'
-#' @return A tibble containing country-level democracy data.
+#' @return A tibble containing country-level data
 #' @export
 load_data <- function() {
   readr::read_csv(
-    "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-11-05/democracy_data.csv"
+    "https://raw.githubusercontent.com/jbened01/Project-1-Gov-Types/refs/heads/main/meta_data.csv",
+    show_col_types = FALSE
   )
 }
