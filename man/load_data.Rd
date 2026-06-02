@@ -2,13 +2,13 @@
 % Please edit documentation in R/load_data.R
 \name{load_data}
 \alias{load_data}
-\title{Load democracy data}
+\title{Load geopolitical data}
 \usage{
 load_data()
 }
 \value{
-A tibble containing country-level democracy data.
+A tibble containing country-level data
 }
 \description{
-Loads the TidyTuesday democracy dataset from November 5, 2024.
+Loads the geopolitical meta dataset used in projects 1 & 2 consisting of economic & health data as well as the original democracy data
 }

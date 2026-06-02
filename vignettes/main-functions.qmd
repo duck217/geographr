@@ -19,10 +19,12 @@ library(geographr)
 ```
 
 ```{r}
-plot_regime_trends(democracy_data, countries = c("Afghanistan", "Canada", "United States"), min_year = 1950)
+plot_regime_gdp(democracy_data, regime_types = c(
+  "Civilian Dictatorship",
+  "Military Dictatorship"))
 ```
 
-This should make a line plot showing a country's `spatial_democracy` over time for the selected countries.
+This should make an area plot showing the mean GDP by regime type from an inputted year range.
 
 ```{r}
 summarize_regime_types(democracy_data, year = 2020)
