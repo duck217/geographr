@@ -1,9 +1,9 @@
 Package: geographr
 Title: Tools for Working with Geopolitical Data
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R: c(
     person("Lin", "Khant", email = "lkhant@calpoly.edu", role = c("aut", "cre")),
-    person("Jack", "Benedict", email = "jbened01@calpoly.edu", role = c("aut", "cre"))
+    person("Jack", "Benedict", email = "jbened01@calpoly.edu", role = c("aut", "cre")))
 Description: Provides helper functions for loading, summarizing, and visualizing country-year geopolitical regime data, including democracy status, election systems, voting, and regime changes.
 License: MIT + file LICENSE
 Encoding: UTF-8
