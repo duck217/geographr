@@ -19,6 +19,7 @@ library(geographr)
 ```
 
 ```{r}
+# not used
 plot_regime_gdp(democracy_data, regime_types = c(
   "Civilian Dictatorship",
   "Military Dictatorship"))
@@ -27,13 +28,13 @@ plot_regime_gdp(democracy_data, regime_types = c(
 This should make an area plot showing the mean GDP by regime type from an inputted year range.
 
 ```{r}
-summarize_regime_types(democracy_data, year = 2020)
+plot_regime_gdp(plot_data, start_year = 2000, end_year = 2020)
 ```
 
 This should show how many countries were in each `regime_category` during a selected year.
 
 ```{r}
-find_regime_changes(democracy_data, country = "Afghanistan")
+summarize_gdp_by_regime(data, year = NULL)
 ```
 
 This should find years where a country experienced a regime change using `has_regime_change_lag` and display the associated `regime_category`.
