@@ -4,6 +4,8 @@
 #'
 #' @return A tibble containing country-level data
 #' @export
+#'
+#' @import readr
 load_data <- function() {
   readr::read_csv(
     "https://raw.githubusercontent.com/jbened01/Project-1-Gov-Types/refs/heads/main/meta_data.csv",

@@ -1,21 +1,19 @@
 Package: geographr
 Title: Tools for Working with Geopolitical Data
 Version: 0.0.0.9000
-Authors@R: 
-<<<<<<< HEAD
-    person("Lin", "Khant", email = "lkhant@calpoly.edu", role = c("aut", "cre"))
-Description: Provides helper functions for loading, summarizing, and visualizing country-year geopolitical regime data, including democracy status, monarchy, election systems, suffrage, and regime changes.
-=======
-    person("Jack", "Benedict", email = "jbened01@calpoly.edu", role = c("aut", "cre"))
+Authors@R:
+    c(
+      person("Jack", "Benedict", email = "jbened01@calpoly.edu", role = c("aut", "cre")),
+      person("Lin", "Khant", email = "lkhant@calpoly.edu", role = "aut")
+    )
 Description: Provides helper functions for loading, summarizing, and visualizing country-year geopolitical regime data, including democracy status, election systems, voting, and regime changes.
->>>>>>> upstream/main
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 8.0.0
 Imports:
     readr
-Suggests: 
+Suggests:
     knitr,
     testthat (>= 3.0.0)
 URL: https://github.com/jbened01/geographr

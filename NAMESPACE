@@ -3,6 +3,8 @@
 export(filter_year)
 export(load_data)
 export(plot_regime_gdp)
+export(summarize_gdp_by_regime)
+import(readr)
 importFrom(dplyr,filter)
 importFrom(dplyr,first)
 importFrom(dplyr,group_by)
