@@ -30,3 +30,10 @@ summarize_gdp_by_regime(data, year = NULL)
 ```
 
 This should find years where a country experienced a regime change using `has_regime_change_lag` and display the associated `regime_category`.
+
+```{r}
+plot_tenure_ridge(tenure_data,
+  regimes = c("Presidential democracy", "Military dictatorship"))
+```
+
+This creates a density ridge plot showing the distribution of presidential tenure for specific regime types.

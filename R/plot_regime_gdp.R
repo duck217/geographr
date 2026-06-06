@@ -32,7 +32,7 @@ plot_regime_gdp <- function(data, start_year = 2000, end_year = 2020) {
       end_year = end_year
     ) |>
     group_by(year, regime_group) |>
-    summarise(
+    summarize(
       mean_gdp = mean(gdp_per_capita_nominal, na.rm = TRUE),
       .groups = "drop"
     )

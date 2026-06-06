@@ -6,9 +6,11 @@
 #'
 #' @return A filtered data frame
 #' @export
+#'
+#' @importFrom dplyr filter
 filter_year <- function(data, start_year = 2000, end_year = 2020) {
   data |>
-    dplyr::filter(
+    filter(
       year >= start_year,
       year <= end_year
     )
