@@ -7,8 +7,7 @@
 #'
 #' @import readr
 load_data <- function() {
-  readr::read_csv(
-    "https://raw.githubusercontent.com/jbened01/Project-1-Gov-Types/refs/heads/main/meta_data.csv",
-    show_col_types = FALSE
-  )
+  read_csv(
+    system.file("meta_data.csv", package = "geographr"),
+    show_col_types = FALSE)
 }
