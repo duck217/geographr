@@ -1,8 +1,8 @@
 ---
-title: "main-functions"
+title: "Getting Started with geographr"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{main-functions}
+  %\VignetteIndexEntry{Getting Started with geographr}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -18,22 +18,67 @@ knitr::opts_chunk$set(
 library(geographr)
 ```
 
+## Loading the Data
+
+`load_data()` loads the geopolitical dataset containing country-level economic,
+health, and regime classification data.
 
 ```{r}
-plot_regime_gdp(plot_data, start_year = 2000, end_year = 2020)
+dat <- load_data()
+head(dat)
 ```
 
-This should show how many countries were in each `regime_category` during a selected year.
+## Filtering by Year
+
+`filter_year()` subsets the data to a specific year range. By default it keeps
+2000–2020.
 
 ```{r}
-summarize_gdp_by_regime(data, year = NULL)
+recent <- filter_year(dat, start_year = 2010, end_year = 2015)
+range(recent$year)
 ```
 
-This should find years where a country experienced a regime change using `has_regime_change_lag` and display the associated `regime_category`.
+## Summarizing GDP by Regime Type
+
+`summarize_gdp_by_regime()` computes the mean, median, and count of GDP per
+capita grouped by regime category. You can optionally filter to a single year.
 
 ```{r}
-plot_tenure_ridge(tenure_data,
-  regimes = c("Presidential democracy", "Military dictatorship"))
+summarize_gdp_by_regime(dat)
 ```
 
-This creates a density ridge plot showing the distribution of presidential tenure for specific regime types.
+```{r}
+summarize_gdp_by_regime(dat, year = 2015)
+```
+
+## Summarizing GDP by Democracy Status
+
+`summarize_gdp_by_democracy()` computes mean GDP per capita for democracies
+vs non-democracies by year. Uses `data.table` under the hood for performance.
+
+```{r}
+dem_summary <- summarize_gdp_by_democracy(dat)
+head(dem_summary)
+```
+
+## Plotting GDP by Regime Type
+
+`plot_regime_gdp()` creates a faceted area plot showing mean GDP per capita
+over time for each regime group.
+
+```{r, fig.width=8, fig.height=5}
+plot_regime_gdp(dat, start_year = 2000, end_year = 2020)
+```
+
+## Plotting Presidential Tenure by Regime
+
+`plot_tenure_ridge()` creates a density ridge plot showing the distribution
+of presidential tenure for selected regime types.
+
+```{r, fig.width=8, fig.height=5}
+plot_tenure_ridge(
+  regimes = c("Presidential democracy", "Military dictatorship"),
+  data = dat
+)
+```
+  

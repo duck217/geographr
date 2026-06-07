@@ -20,7 +20,8 @@ Imports:
     stringr,
     stats,
     ggridges,
-    viridis
+    viridis,
+    data.table
 Suggests:
     knitr,
     testthat (>= 3.0.0)
