@@ -5,6 +5,7 @@ Authors@R:
     c(
       person("Jack", "Benedict", email = "jbened01@calpoly.edu", role = c("aut", "cre")),
       person("Lin", "Khant", email = "lkhant@calpoly.edu", role = "aut")
+      person("Jorel", "Ma", email = "jma94@calpoly.edu", role = "aut")
     )
 Description: Provides helper functions for loading, summarizing, and visualizing country-year geopolitical regime data, including democracy status, election systems, voting, and regime changes.
 License: MIT + file LICENSE
