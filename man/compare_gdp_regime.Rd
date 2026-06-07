@@ -35,7 +35,6 @@ results <- compare_gdp_regime(dat)
 results$anova
 results$tukey
 
-# Restrict to a single year
 results_2015 <- compare_gdp_regime(dat, year = 2015)
 }
 
